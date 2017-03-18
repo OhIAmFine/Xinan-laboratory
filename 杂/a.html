@@ -1,0 +1,292 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" type="text/css" href="课表.css">
+</style>
+</head>
+
+<body>
+	<p>我的课表</p>
+<div class="我的课表" >
+	<div class="栏目">
+		<div class="a"></div>
+		<div class="一二节">一二节</div>
+		<div class="三四节">三四节</div>
+		<div class="五六节">五六节</div>
+		<div class="七八节">七八节</div>
+		<div class="九十节">九十节</div>
+		<div class="十一二节">十一二节</div>
+		</div>
+	<div class="周一">
+		<div class="a">周一</div>
+
+        <div  class="一二节"> 130599
+集中实践(面向对象程序设计)
+
+软件工程实验室（测试）B131
+集中实践
+2周
+选课状态:正常</div>
+        <div  class="三四节"> 131140
+数据与算法基础(1)(数据结构)
+徐光侠
+2401
+必修
+1-16周
+选课状态:正常
+</div>
+        <div  class="五六节"> 050528
+英语视听说3
+Joe
+5205
+必修
+1-16周
+选课状态:正常</div>
+        <div  class="七八节"></div>
+        <div  class="九十节">
+        131140
+数据与算法基础(1)(数据结构)
+
+软件工程实验室（设计）B132
+随课实验
+7-14周
+选课状态:正常</div>
+        <div  class="十一二节"></div>
+	</div>
+	<div class="周二">
+		<div class="a">周二</div>
+	<div  class="一二节"> 040631
+工程数学
+罗燕
+3508
+限选
+1-16周
+选课状态:正常
+</div>
+        <div  class="三四节"></div>
+        <div  class="五六节">131141
+数据与算法基础(2)(数据库)
+熊仕勇
+2202
+必修
+1-16周
+选课状态:正常</div>
+        <div  class="七八节"> 130599
+集中实践(面向对象程序设计)
+
+软件工程实验室（测试）B131
+集中实践
+2周
+选课状态:正常</div>
+        <div  class="九十节">121118
+大学生审美修养
+肖雪梅
+8131
+任选
+1-8周
+选课状态:正常</div>
+        <div  class="十一二节"> 121018
+中外名片赏析
+肖雪梅
+8131
+任选
+1-16周
+选课状态:正常</div>
+    </div>
+	<div class="周三">
+		<div class="a">周三</div>
+		<div  class="一二节">130599
+集中实践(面向对象程序设计)
+
+软件工程实验室（测试）B131
+集中实践
+2周
+选课状态:正常
+
+</div>
+        <div  class="三四节"> 050547
+综合英语3
+杨华英 
+4203
+限选
+1-16周
+选课状态:正常</div>
+        <div  class="五六节">131141
+数据与算法基础(2)(数据库)</div>
+        <div  class="七八节"></div>
+        <div  class="九十节"></div>
+        <div  class="十一二节"></div>
+    </div>
+	<div class="周四">
+		<div class="a">周四</div>
+		<div  class="一二节"></div>
+        <div  class="三四节"></div>
+        <div  class="五六节"> 040631
+工程数学
+罗燕
+3508
+限选
+单周
+选课状态:正常</div>
+        <div  class="七八节"></div>
+        <div  class="九十节"> 130599
+集中实践(面向对象程序设计)
+</div>
+        <div  class="十一二节"> 130599
+集中实践(面向对象程序设计)
+
+软件工程实验室（测试）B131
+集中实践
+2周
+选课状态:正常
+</div>
+    </div>
+	<div class="周五">
+		<div class="a">周五</div>
+		<div  class="一二节"> 050517
+英语语法与写作1
+何武
+2309
+限选
+1-16周
+选课状态:正常
+</div>
+        <div  class="三四节">070112
+中国近现代史纲要
+邓庆伟 
+2301
+必修
+1-10周
+选课状态:正常
+
+</div>
+        <div  class="五六节"></div>
+        <div  class="七八节">090113
+体育(俱乐部)足球俱乐部
+教师1
+运动场1
+必修
+1-16周
+选课状态:正常
+</div>
+        <div  class="九十节"></div>
+        <div  class="十一二节"></div>
+    </div>
+
+    </div>
+
+</div>
+<script language="JavaScript"> 
+<!--
+var no = 50;
+var speed = 1;
+var ns4up = (document.layers) ? 1 : 0;
+var ie4up = (document.all) ? 1 : 0;
+var s, x, y, sn, cs;
+var a, r, cx, cy;
+var i, doc_width = 800, doc_height = 600;
+if (ns4up) {
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+else
+if (ie4up) {
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+x = new Array();
+y = new Array();
+r = new Array();
+cx = new Array();
+cy = new Array();
+s = 8;
+for (i = 0; i < no; ++ i) {  
+initRain();
+if (ns4up) {
+if (i == 0) {
+document.write("<layer name=\"dot"+ i +"\" left=\"1\" ");
+document.write("top=\"1\" visibility=\"show\"><font color=\"red\">");
+document.write(".</font></layer>");
+}
+else {
+document.write("<layer name=\"dot"+ i +"\" left=\"1\" ");
+document.write("top=\"1\" visibility=\"show\"><font color=\"red\">");
+document.write(".</font></layer>");
+   }
+}
+else 
+if (ie4up) {
+if (i == 0) {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><font color=\"red\">");
+document.write(".</font></div>");
+}
+else {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><font color=\"red\">");
+document.write(".</font></div>");
+      }
+   }
+}
+function initRain() {
+a = 6;
+r[i] = 1;
+sn = Math.sin(a);
+cs = Math.cos(a);
+cx[i] = Math.random() * doc_width + 1;
+cy[i] = Math.random() * doc_height + 1;
+x[i] = r[i] * sn + cx[i];
+y[i] = cy[i];
+}
+function makeRain() {
+r[i] = 1;
+cx[i] = Math.random() * doc_width + 1;
+cy[i] = 1;
+x[i] = r[i] * sn + cx[i];
+y[i] = r[i] * cs + cy[i];
+}
+function updateRain() {
+r[i] += s;
+x[i] = r[i] * sn + cx[i];
+y[i] = r[i] * cs + cy[i];
+}
+function raindropNS() {
+for (i = 0; i < no; ++ i) {
+updateRain();
+if ((x[i] <= 1) || (x[i] >= (doc_width - 20)) || (y[i] >= (doc_height - 20))) {
+makeRain();
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+document.layers["dot"+i].top = y[i];
+document.layers["dot"+i].left = x[i];
+}
+setTimeout("raindropNS()", speed);
+}
+function raindropIE() {
+for (i = 0; i < no; ++ i) {
+updateRain();
+if ((x[i] <= 1) || (x[i] >= (doc_width - 20)) || (y[i] >= (doc_height - 20))) {
+makeRain();
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+document.all["dot"+i].style.pixelTop = y[i];
+document.all["dot"+i].style.pixelLeft = x[i];
+}
+setTimeout("raindropIE()", speed);
+}
+if (ns4up) {
+raindropNS();
+}
+else
+if (ie4up) {
+raindropIE();
+}
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>题目四</title>
+</head>
+<script type="text/javascript">
+	window.onload=function(){
+		var oDiv1=document.getElementById('div1');
+		var oDiv2=document.getElementById('div2');
+		var oDiv3=document.getElementById('div3');
+	/*	var num=0;
+		var oDivGroup=document.getElementsByTagName('div');
+		for (var i = 1; i <13; i++) {
+			oDivGroup[i][style][top]=10*i+num+'px';
+			num=num*100;
+		};*/
+		moveDiv(oDiv1);
+		moveDiv(oDiv2);
+		moveDiv(oDiv3);
+ 	
+		function moveDiv(element){
+		element.onmousedown=function(ev){
+			var ev=ev||event;
+			var disX=ev.clientX-this.offsetLeft;
+			var disY=ev.clientY-this.offsetTop;
+			var widthX=document.documentElement.clientWidth;
+			var widthY=document.documentElement.clientHeight;
+			
+			document.onmousemove=function(ev){
+				var ev=ev||event;
+				var X=ev.clientX-disX;
+				var Y=ev.clientY-disY;
+				if(X>0){
+				element.style.left=X+'px';
+				if(X>widthX-element.offsetWidth ){
+					element.style.left=widthX-element.offsetWidth+'px';
+				}
+
+				}
+				
+				if(X<0){element.style.left=0;}
+				if(Y>0){
+				element.style.top=Y+'px';
+			    if(Y>widthY-element.offsetHeight){
+					element.style.top=widthY-element.offsetHeight+'px';
+				}
+			    }
+			    
+				if(Y<0){element.style.top=0;}
+
+			}
+		document.onmouseup=function(){
+			document.onmousemove=document.onmouseup=null;
+
+		}
+		return false;
+
+		}
+	}
+	}
+
+	</script>
+<style type="text/css">
+
+	#box1{
+		width: 300px;
+		height: 800px;
+		float: left;
+		border: 1px solid black;
+		position: relative;
+	}
+	#box2{
+		width: 300px;
+		height: 800px;
+		border: 1px solid black;
+		float: right;
+		position: relative;
+
+	}
+	#div1,#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9,#div10,#div11,#div12{
+		width: 300px;
+		height: 100px;
+		background: blue;
+		position: absolute;
+	}
+	#div2{
+		top: 110px;
+	}
+	#div3{
+		top: 220px;
+	}
+
+	#div4{
+		top: 330px;
+	}
+
+	#div5{
+		top: 440px;
+	}
+
+	#div6{
+		top: 550px;
+	}
+
+	#div7{
+		top: 0px;
+	}
+
+	#div8{
+		top: 110px;
+	}
+
+	#div9{
+		top: 220px;
+	}
+
+</style>
+<body>
+	<div id="box1">
+		<div id="div1" ></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<!--<div id="div4"></div>
+		<div id="div5"></div>
+		<div id="div6"></div>-->
+	</div>
+
+	<div id="box2">
+		<div id="div7"></div>
+		<div id="div8"></div>
+		<div id="div9"></div>
+		<div id="div10"></div>
+		<div id="div11"></div>
+		<div id="div12"></div>
+	</div>
+</body>
+</html>

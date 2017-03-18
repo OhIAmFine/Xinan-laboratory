@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var index=0;
+
+		canvas.width=800;
+		canvas.height=800;	
+		var context=canvas.getContext("2d");
+		
+		setInterval(function(){
+		context.beginPath();
+
+		context.clearRect(0,0,800,800);
+
+
+		// context.font="20px Arial";
+		// context.fillText("12/0",380,200);
+		// context.fillText("12/0",580,400);
+		// context.fillText("12/0",600,400);
+		// context.fillText("12/0",280,400);
+		context.arc(400,400,200,200,0,2*Math.PI);
+		context.moveTo(400,400);
+		context.lineTo(400+200*Math.sin((Math.PI*2/60)*index),400-200*Math.cos((Math.PI*2/60)*index));
+		context.strokeStyle="blue";
+		context.lineWidth="3";
+		context.stroke();
+		context.closePath();
+			if (index>60) {
+				index=0;;
+			};
+			index=index+1;
+			// console.log(index)
+		},1000)
+	}
+	</script>
+</head>
+<body>
+	<canvas id='canvas'  style="border:1px solid black;display:block;margin:50px auto"></canvas>
+</body>
+</html>

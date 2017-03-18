@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>题目二</title>
+</head>
+<style type="text/css">
+	div{width: 100px;
+		height: 100px;
+		background: red;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function  () {
+		var Odiv=document.getElementById('div1');
+		addEvent(Odiv,'click',function(){
+			alert('endFunction_div');
+		});
+
+
+		function addEvent( element,event,listener){
+			if(event=='click'){
+				element['on'+event]=function(){
+					alert('click');
+				}
+				listener&&listener();
+			}
+			
+		}
+	}
+</script>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

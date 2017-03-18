@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二题(2)</title>
+
+</head>
+<style type="text/css">
+	.div1{
+		width: 100px;
+		height: 100px;
+		background: red;
+		float: left;
+	}
+	.div2{
+		width: 100px;
+		height: 100px;
+		background: blue;
+		float: left;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var oDiv=document.getElementById('div3');
+		var oWid=document.body.clientWidth;
+			oDiv.style.width=(oWid-100)+'px';
+
+		}
+</script>
+<body>
+	
+	<div class="div1" ></div>
+	<div class="div2" id="div3"></div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.boss{
+	width: 520px;
+	margin: auto;
+	height: 30px;
+	 font-size:25px;
+}
+.boss ul li{
+	width: 104px;
+	height: 30px;
+	float: left;
+}
+.boss  ul li a{
+	width: 104px;
+	height: 30px;
+	background-color: purple;
+	border:2px solid gray;
+	line-height: 29px;
+	text-align: center;
+}
+.boss ul{
+	list-style: none;
+}
+.boss ul li ul  {
+	display: none;
+}
+.boss ul li:hover  ul  {
+	background-color: yellow;
+	display: block;
+	width: 104px;
+	height: 145px;
+	color: white;
+	}
+	.boss ul li:hover ul  li a{
+		width: 104px;
+		color: white;
+		height: 29px;
+		border:2px solid red;
+	}
+	.boss ul li:hover ul  li a:hover,.boss ul   li a:hover,
+	.boss ul li:hover ul  li:hover ul li:hover{
+       color: blue;
+       background-color: black;
+	}
+	.boss ul li:hover ul li ul {
+		display: none;
+	}
+	.boss ul li:hover ul li:hover ul {
+		width: 104px;
+		height: 145px;
+		display: block;
+		background-color: black;
+		position:relative;
+		left: 104px;
+	color: white;
+	top:-29px;
+	clear: both;
+	}

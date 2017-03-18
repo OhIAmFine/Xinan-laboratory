@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	
+	function ajax(){
+		this.xhr=new XMLHttpRequest();
+	}
+
+	ajax.prototype.get=function(url,data, fn1){
+		url += '?' + data.data;
+		this.xhr.open("get",url,true);
+		this.xhr.onreadystatechange = function() {
+		if ( this.xhr.readyState == 4 ) {
+			if ( this.xhr.status == 200 ) {
+				fn1 && fn1(this.xhr.responseText);
+			} else {
+				alert('出错了,Err：' + this.xhr.status);
+			}
+		}
+		
+	}
+
+	}
+	ajax.prototype.post=function(url, data, fn2){
+
+		this.xhr.open("post",url,true);
+		this.xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+		this.xhr.send(data);
+		this.xhr.onreadystatechange = function() {
+		
+		if ( this.xhr.readyState == 4 ) {
+			if ( this.xhr.status == 200 ) {
+				fn2 && fn2(this.xhr.responseText);
+			} else {
+				alert('出错了,Err：' + this.xhr.status);
+			}
+		}
+		
+	}
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二题（2）</title>
+</head>
+<style type="text/css">
+	
+	body{margin: 0;}
+	ul{list-style: none;width: 100%;padding: 0;margin: 0;}
+	li{float: left;background: red;width: 100px;}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var oLi2=document.getElementById('li2');
+		var oWid=document.body.clientWidth;
+			oLi2.style.width=(oWid-200)+'px';
+			oLi2.style.background='blue';
+	}
+</script>
+<body>
+	<ul>
+		<li class="li1">1</li>
+		<li class="li2" id="li2">2</li>
+		<li class="li3">3</li>
+	</ul>
+	
+</body>
+</html>
